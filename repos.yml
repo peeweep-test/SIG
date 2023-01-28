@@ -34,3 +34,7 @@ repos:
   - repo: tslib
     group: deepin-pkg
     info: Tslib is an abstraction layer for touchscreen panel events.
+  
+  - repo: obs-test-repo
+    group: deepin-pkg
+    info: Tslib is an abstraction layer for touchscreen panel events.
