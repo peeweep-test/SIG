@@ -38,3 +38,11 @@ repos:
   - repo: obs-test-repo
     group: deepin-pkg
     info: Tslib is an abstraction layer for touchscreen panel events.
+    
+  - repo: deepin-desktop-environment
+    group: deepin-sysdev-team
+    info: Deepin New Desktop Environment - Next
+  
+  - repo: sshpass
+    group: deepin-sysdev-team
+    info: Non-interactive ssh password authentication
