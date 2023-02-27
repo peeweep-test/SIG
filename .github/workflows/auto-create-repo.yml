@@ -8,6 +8,7 @@ on:
 env:
   APP_ID: 229710
   APP_PRIVATE_KEY: ${{ secrets.APP_PRIVATE_KEY }}
+  CHANGE_ID: ${{ github.event.pull_request.number }}
 
 jobs:
   create_repo:
@@ -67,16 +68,26 @@ jobs:
               "Accept": "application/vnd.github+json",
               "Authorization":"Bearer " + os.environ.get("GITHUB_TOKEN")
           }
+          header1 = {
+              "Accept": "application/vnd.github.v3.diff"
+          }
+
           create_repo_url = 'https://api.github.com/repos/deepin-community/template-repository/generate'
+          get_prdiff_url = 'https://api.github.com/repos/peeweep-test/SIG/pulls/'
 
           def set_output(name, value):
               output_file = os.environ.get("GITHUB_OUTPUT")
               with open(output_file, "w") as output:
                   output.write(name + "=" + value + "\n")
                   
-          def read_yml():
-              with open("repos.yml", "r+") as intergration_file:
-                  return yaml.load(intergration_file, Loader=yaml.BaseLoader)
+          def get_pr_diff():
+              res = requests.get(get_prdiff_url,headers = header1)
+              data = res.text
+              f = open("diff","w")
+              f.write(data)
+              f.close()
+              reponame = os.system("cat diff | grep '+  - repo:'| awk '{print $4}' ")
+              return str(reponame)
                   
           def check_repo(repo):
               res = requests.get("https://api.github.com/repos/deepin-community/{repo}".format(repo=repo))
@@ -98,12 +109,13 @@ jobs:
               os.popen('''osc ci -m "init"''').read()
 
           try:
-              data = read_yml()
+              data = get_pr_diff()
               os.chdir("deepin:Develop:community")
-              for repo in data.get("repos"):
-                  print(repo.get('repo'))
-                  if check_repo(repo.get('repo')) == None:
-                      create_repo(repo.get('repo'))
+              for repo in data:
+                  if repo != '0':
+                    print(repo)
+                      if check_repo(repo) == None:
+                          create_repo(repo)
           except BaseException as e:
               logging.error(e)
               exit(-10)         
