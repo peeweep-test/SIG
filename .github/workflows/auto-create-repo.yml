@@ -2,13 +2,13 @@ name: auto create repo
 on:
    pull_request_target:
      types: [opened, synchronize, closed]
-     paths:
-       - "repos.yml"
-   workflow_call:
-      inputs:
+     inputs:
         repo:
           type: string
           default: deepin-community/Repository-Integration
+     paths:
+       - "repos.yml"
+
 
 
 env:
