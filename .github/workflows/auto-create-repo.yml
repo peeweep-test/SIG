@@ -6,7 +6,7 @@ on:
       - "repos.yml"
 
 env:
-  APP_ID: 164400
+  APP_ID: 229710
   APP_PRIVATE_KEY: ${{ secrets.DEEPINCOMMUNITY_APP_PRIVATE_KEY }}
 
 jobs:
