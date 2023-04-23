@@ -8,7 +8,7 @@ on:
       inputs:
         repo:
           type: string
-          default: deepin-community
+          default: deepin-community/Repository-Integration
 
 
 env:
@@ -35,7 +35,7 @@ jobs:
           script: |
             const { Octokit } = require("@octokit/rest");
             const { createAppAuth } = require("@octokit/auth-app");
-            repoinfo = "${{ inputs.repo }}"
+            repoinfo = "${{ inputs.repo }}".split('/')
             owner = repoinfo[0]
             repo = repoinfo[1]
             const appOctokit = new Octokit({
