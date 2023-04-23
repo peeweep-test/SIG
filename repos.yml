@@ -420,6 +420,6 @@ repos:
     group: deepin-sysdev-team
     info: 'Image loading and manipulation library'
     
-  - repo: test-tmp
+  - repo: test-tmp1
     group: deepin-sysdev-team
     info: 'Image loading and manipulation library'
