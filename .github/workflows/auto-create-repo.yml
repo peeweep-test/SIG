@@ -1,9 +1,16 @@
 name: auto create repo
 on:
-  pull_request_target:
-    types: [opened, synchronize, closed]
-    paths:
-      - "repos.yml"
+  workflow_call:
+    inputs:
+      repo:
+        type: string
+        default: deepin-community
+  workflow_dispatch:
+  repository_dispatch:
+#   pull_request_target:
+#     types: [opened, synchronize, closed]
+#     paths:
+#       - "repos.yml"
 
 env:
   APP_ID: 229710
@@ -29,6 +36,9 @@ jobs:
           script: |
             const { Octokit } = require("@octokit/rest");
             const { createAppAuth } = require("@octokit/auth-app");
+            repoinfo = "${{ inputs.repo }}".split('/')
+            owner = repoinfo[0]
+            repo = repoinfo[1]
             const appOctokit = new Octokit({
               authStrategy: createAppAuth,
               auth: {
@@ -37,8 +47,8 @@ jobs:
               }
             });
             const app_installation = await appOctokit.rest.apps.getRepoInstallation({
-              owner: context.payload.organization.login,
-              repo: context.payload.repository.name
+              owner: owner,
+              repo: repo
             });
             const { token } = await appOctokit.auth({
               type: "installation",
