@@ -419,3 +419,12 @@ repos:
   - repo: gdk-pixbuf
     group: deepin-sysdev-team
     info: 'Image loading and manipulation library'
+
+  - repo: http-parser
+    group: deepin-sysdev-team
+    info: 'HTTP request/response parser for C'
+
+  - repo: libgit2
+    group: deepin-sysdev-team
+    info: 'A cross-platform, linkable library implementation of Git that you can use in your application'
+    
