@@ -87,7 +87,7 @@ jobs:
                   output.write(name + "=" + value + "\n")
                   
           def get_pr_diff():
-              res = requests.get("https://api.github.com/repos/deepin-community/SIG/pulls/" + os.environ.get("CHANGE_ID") ,headers = header1)
+              res = requests.get("https://api.github.com/repos/peeweep-test/SIG/pulls/" + os.environ.get("CHANGE_ID") ,headers = header1)
               data = res.text
               f = open("diff","w")
               f.write(data)
