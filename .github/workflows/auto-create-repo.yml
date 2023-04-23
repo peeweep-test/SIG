@@ -27,15 +27,13 @@ jobs:
       - name: Get token using github-script
         id: get-token
         uses: actions/github-script@v6
-        inputs:
-            repo:
-              type: string
-              default: deepin-community/Repository-Integration
+        env:
+            repo: deepin-community/Repository-Integration
         with:
           script: |
             const { Octokit } = require("@octokit/rest");
             const { createAppAuth } = require("@octokit/auth-app");
-            repoinfo = "${{ inputs.repo }}".split('/')
+            repoinfo = process.env.repo.split('/')
             owner = repoinfo[0]
             repo = repoinfo[1]
             const appOctokit = new Octokit({
