@@ -420,11 +420,6 @@ repos:
     group: deepin-sysdev-team
     info: 'Image loading and manipulation library'
 
-  - repo: http-parser
+  - repo: imwheel
     group: deepin-sysdev-team
-    info: 'HTTP request/response parser for C'
-
-  - repo: libgit2
-    group: deepin-sysdev-team
-    info: 'A cross-platform, linkable library implementation of Git that you can use in your application'
-    
+    info: 'A program to configure the mouse wheel to send keypresses's
