@@ -422,4 +422,8 @@ repos:
 
   - repo: imwheel
     group: deepin-sysdev-team
-    info: 'A program to configure the mouse wheel to send keypresses's
+    info: 'A program to configure the mouse wheel to send keypresses'
+
+  - repo: librist
+    group: deepin-sysdev-team
+    info: 'RIST is a protocol for low-latency, high-quality, and secure streaming of audio and video'
