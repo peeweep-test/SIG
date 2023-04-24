@@ -427,3 +427,7 @@ repos:
   - repo: librist
     group: deepin-sysdev-team
     info: 'RIST is a protocol for low-latency, high-quality, and secure streaming of audio and video'
+
+  - repo: gtk-layer-shell
+    group: deepin-sysdev-team
+    info: 'GTK library for layer-shell protocol'
