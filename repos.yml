@@ -435,3 +435,7 @@ repos:
   - repo: fdk-aac
     group: deepin-sysdev-team
     info: 'Fraunhofer FDK AAC Codec Library - frontend binary'
+
+  - repo: golang-1.19
+    group: deepin-sysdev-team
+    info: 'Go programming language compiler 1.19'
