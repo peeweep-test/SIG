@@ -431,3 +431,7 @@ repos:
   - repo: gtk-layer-shell
     group: deepin-sysdev-team
     info: 'GTK library for layer-shell protocol'
+
+  - repo: fdk-aac
+    group: deepin-sysdev-team
+    info: 'Fraunhofer FDK AAC Codec Library - frontend binary'
