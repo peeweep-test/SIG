@@ -451,3 +451,8 @@ repos:
   - repo: libmpack-lua
     group: deepin-sysdev-team
     info: 'MessagePack for Lua'
+
+  - repo: maven-debian-helper
+    group: deepin-sysdev-team
+    info: maven-debian-helper is a set of tools used to generate Debian packages from Maven projects and build them in a manner that complies with the Debian policies.
+
