@@ -456,3 +456,8 @@ repos:
     group: deepin-sysdev-team
     info: maven-debian-helper is a set of tools used to generate Debian packages from Maven projects and build them in a manner that complies with the Debian policies.
 
+  - repo: mathjax
+    group: deepin-sysdev-team
+    info: MathJax was designed with the goal of consolidating the recent advances in web
+ technologies into a single, definitive, math-on-the-web platform supporting
+ the major browsers and operating systems.
