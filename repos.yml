@@ -613,3 +613,7 @@ repos:
   - repo: libplack-perl
     group: deepin-sysdev-team
     info: 'interface between web servers and Perl web applications'
+
+  - repo: hicolor-icon-theme
+    group: deepin-sysdev-team
+    info: This is the default fallback theme used by implementations of the Freedesktop.org Icon Theme specification.
