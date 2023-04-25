@@ -440,3 +440,7 @@ repos:
   - repo: libel-api-java
     group: deepin-sysdev-team
     info: EL is a simple language designed to meet the needs of the presentation layer in Java web applications.      
+
+  - repo: webkit2gtk
+    group: deepin-sysdev-team
+    info: Web content engine library for GTK.     
