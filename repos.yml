@@ -435,3 +435,8 @@ repos:
   - repo: fdk-aac
     group: deepin-sysdev-team
     info: 'Fraunhofer FDK AAC Codec Library - frontend binary'
+    
+
+  - repo: libel-api-java
+    group: deepin-sysdev-team
+    info: EL is a simple language designed to meet the needs of the presentation layer in Java web applications.      
