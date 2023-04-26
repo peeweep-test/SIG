@@ -435,7 +435,6 @@ repos:
   - repo: fdk-aac
     group: deepin-sysdev-team
     info: 'Fraunhofer FDK AAC Codec Library - frontend binary'
-    
 
   - repo: libel-api-java
     group: deepin-sysdev-team
@@ -444,3 +443,11 @@ repos:
   - repo: webkit2gtk
     group: deepin-sysdev-team
     info: Web content engine library for GTK.     
+
+  - repo: libmpack
+    group: deepin-sysdev-team
+    info: 'MessagePack for C'
+
+  - repo: libmpack-lua
+    group: deepin-sysdev-team
+    info: 'MessagePack for Lua'
