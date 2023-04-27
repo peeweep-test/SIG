@@ -465,3 +465,7 @@ repos:
   - repo: lua-lpeg
     group: deepin-sysdev-team
     info: 'LPeg is a pattern-matching library for Lua, based on Parsing Expression Grammars (PEGs)'
+
+  - repo: libmoose-perl
+    group: deepin-sysdev-team
+    info: 'It provides a modern, object-oriented methodology for object construction and class writing'
