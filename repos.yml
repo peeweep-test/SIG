@@ -469,3 +469,11 @@ repos:
   - repo: libmoose-perl
     group: deepin-sysdev-team
     info: 'It provides a modern, object-oriented methodology for object construction and class writing'
+
+  - repo: libmodule-runtime-perl
+    group: deepin-sysdev-team
+    info: 'Perl module for runtime module handling'
+
+  - repo: libmodule-implementation-perl
+    group: deepin-sysdev-team
+    info: 'module for loading one of several alternate implementations of a module'
