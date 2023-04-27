@@ -459,5 +459,9 @@ repos:
   - repo: mathjax
     group: deepin-sysdev-team
     info: MathJax was designed with the goal of consolidating the recent advances in web
- technologies into a single, definitive, math-on-the-web platform supporting
- the major browsers and operating systems.
+    technologies into a single, definitive, math-on-the-web platform supporting
+    the major browsers and operating systems.
+
+  - repo: lua-lpeg
+    group: deepin-sysdev-team
+    info: 'LPeg is a pattern-matching library for Lua, based on Parsing Expression Grammars (PEGs)'
