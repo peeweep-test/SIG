@@ -477,3 +477,31 @@ repos:
   - repo: libmodule-implementation-perl
     group: deepin-sysdev-team
     info: 'module for loading one of several alternate implementations of a module'
+
+  - repo: libnamespace-autoclean-perl
+    group: deepin-sysdev-team
+    info: 'module to remove imported symbols after compilation'
+
+  - repo: libmro-compat-perl
+    group: deepin-sysdev-team
+    info: 'method resolution order and method caching in general'
+
+  - repo: libmodule-refresh-perl
+    group: deepin-sysdev-team
+    info: 'tool to refresh %INC files when updated on disk'
+
+  - repo: libmodule-install-perl
+    group: deepin-sysdev-team
+    info: 'framework for installing Perl modules'
+
+  - repo: libmodule-install-authortests-perl
+    group: deepin-sysdev-team
+    info: 'designate tests only run by module authors'
+
+  - repo: libmodule-install-extratests-perl
+    group: deepin-sysdev-team
+    info: 'contextual tests that the harness can ignore'
+
+  - repo: libmodule-pluggable-perl
+    group: deepin-sysdev-team
+    info: 'module to provide information on conflicts for Module::Runtime'
