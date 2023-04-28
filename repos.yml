@@ -504,4 +504,8 @@ repos:
 
   - repo: libmodule-pluggable-perl
     group: deepin-sysdev-team
+    info: 'module for giving modules the ability to have plugins'
+
+  - repo: libmodule-runtime-conflicts-perl
+    group: deepin-sysdev-team
     info: 'module to provide information on conflicts for Module::Runtime'
