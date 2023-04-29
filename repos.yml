@@ -513,3 +513,7 @@ repos:
   - repo: autodep8
     group: deepin-sysdev-team
     info: 'DEP-8 test control file generator'
+
+  - repo: libmoo-perl
+    group: deepin-sysdev-team
+    info: 'Minimalist Object Orientation library (with Moose compatibility)'
