@@ -509,3 +509,7 @@ repos:
   - repo: libmodule-runtime-conflicts-perl
     group: deepin-sysdev-team
     info: 'module to provide information on conflicts for Module::Runtime'
+  
+  - repo: autodep8
+    group: deepin-sysdev-team
+    info: 'DEP-8 test control file generator'
