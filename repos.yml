@@ -613,3 +613,7 @@ repos:
   - repo: libplack-perl
     group: deepin-sysdev-team
     info: 'interface between web servers and Perl web applications'
+
+  - repo: haskell-pandoc-types
+    group: deepin-sysdev-team
+    info: 'Haskell data types to represent structured documents'
