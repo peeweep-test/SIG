@@ -613,3 +613,7 @@ repos:
   - repo: libplack-perl
     group: deepin-sysdev-team
     info: 'interface between web servers and Perl web applications'
+
+  - repo: spdx-licenses
+    group: deepin-sysdev-team
+    info: 'Collection of license data provided by SPDX Workgroup'
