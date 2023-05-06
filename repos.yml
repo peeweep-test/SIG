@@ -617,3 +617,11 @@ repos:
   - repo: spdx-licenses
     group: deepin-sysdev-team
     info: 'Collection of license data provided by SPDX Workgroup'
+
+  - repo: haskell-unicode-collation
+    group: deepin-sysdev-team
+    info: 'Haskell implementation of the Unicode Collation Algorithm'
+
+  - repo: haskell-unicode-data
+    group: deepin-sysdev-team
+    info: 'Access Unicode character database'
