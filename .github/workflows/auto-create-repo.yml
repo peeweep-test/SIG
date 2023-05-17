@@ -72,8 +72,7 @@ jobs:
           header1 = {
               "Accept": "application/vnd.github.v3.diff"
           }
-          create_repo_url = 'https://api.github.com/repos/' + os.environ.get("ORG") + '/template-repository/generate'
-
+          create_repo_url = "https://api.github.com/repos/" + os.environ.get("ORG") + "/template-repository/generate"
 
           def set_output(name, value):
               output_file = os.environ.get("GITHUB_OUTPUT")
@@ -114,6 +113,7 @@ jobs:
               os.popen("osc rdelete deepin:Develop:%s/%s -m 'Remove by sig pr' " % (component, repo)).read()
 
           def create_repo(repo):
+              print("create_repo: " + repo)
               org = os.environ.get("ORG")
               component = "community"
               if '#' in repo:
@@ -126,9 +126,10 @@ jobs:
                       'name': repo
                       }
 
+              url = create_repo_url
               if component != "community":
-                  create_repo_url = create_repo_url + "-main"
-              res = requests.post(create_repo_url, json = data_repo, headers = header) 
+                  url = create_repo_url + "-main"
+              res = requests.post(url, json = data_repo, headers = header)
               print("create_repo ",res.text)
               os.popen("if [ ! -d deepin:Develop:%s ];then osc co deepin:Develop:%s template-repository;fi" % (component, component))
               os.chdir("deepin:Develop:%s" % component)
